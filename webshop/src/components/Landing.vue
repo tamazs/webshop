@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-12">
                 <div id="landing">
-                    <video :src="video" id="video" loop muted autoplay playsinline></video>
+                    <video :src="video" id="video" loop muted autoplay playsinline webkit-playsinline></video>
+                    <img :src="require('/src/assets/landing.jpg')" id="mobilelanding">
                     <div id="landingtext">Streetverse</div>
                     <div id="landingtext2">Your go to<br>sneaker shop</div>
                 </div>
@@ -37,8 +38,13 @@ export default {
 }
 
 #video{
+    display: none;
+}
+
+#mobilelanding {
     height: 100vh;
     width: 100vw;
+    object-fit: cover;
 }
 
 #landingtext {
@@ -96,5 +102,15 @@ export default {
     padding: 10px;
     font-family: 'Raleway', sans-serif;
     }
+
+    #mobilelanding {
+    display: none;
+    }
+
+    #video{
+    display: unset;
+    height: 100vh;
+    width: 100vw;
+}
 }
 </style>
