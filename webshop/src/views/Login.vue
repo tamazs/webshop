@@ -1,10 +1,10 @@
 <template>
-    <div id="signupbody">
+    <div id="loginbody">
     <form class="p-5" @submit.prevent="login">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <div class="card bg-dark">
+            <div class="card bg-dark" id="card">
               <div class="card-body">
                 <h3 class="font-weight-light mb-3 text-white text-uppercase">Log in</h3>
                 <section class="form-group">
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#signupbody {
+#loginbody {
     height: 100vh;
     width: 100vw;
     background-color: black;
@@ -90,5 +90,9 @@ export default {
 
 form {
     top: 30%;
+}
+
+#card {
+  padding: 60px;
 }
 </style>

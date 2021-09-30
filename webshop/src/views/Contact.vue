@@ -10,12 +10,12 @@
                     <h5>Call us anytime at: +45 81 91 97 21</h5>
                 </div>
                 <div class="contactrows">
-                    <img :src="require('/src/assets/phone.svg')" id="phone" alt="Card image cap">
-                    <h5>Call us anytime at: +45 81 91 97 21</h5>
+                    <img :src="require('/src/assets/mail.svg')" id="phone" alt="Card image cap">
+                    <h5>Send us an email at: streetverse@gmail.com</h5>
                 </div>
                 <div class="contactrows">
-                    <img :src="require('/src/assets/phone.svg')" id="phone" alt="Card image cap">
-                    <h5>Call us anytime at: +45 81 91 97 21</h5>
+                    <img :src="require('/src/assets/location.svg')" id="phone" alt="Card image cap">
+                    <h5>Visit our store in Esbjerg.</h5>
                 </div>
             </div>
         </div>
@@ -34,10 +34,12 @@
 #container {
     display: flex;
     align-items: center;
+    flex-direction: column-reverse;
 }
 
 #contactinfo {
-    margin-left: 300px;
+    margin-left: 0;
+    padding: 50px;
 }
 
 #phone {
@@ -60,13 +62,44 @@ iframe {
   }
 
 #map {
-    height: 94vh;
-    width: 40vw;
+    height: 50vh;
+    width: 100vw;
 }
 
 #phone {
     height: 25px;
     width: auto;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 890px) {
+    #container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    }
+
+    #contactinfo {
+    margin-left: 300px;
+}
+
+    #map {
+    height: 94vh;
+    width: 50vw;
+}
+
+#phone {
+    height: 30px;
+    width: auto;
+}
+
+h5 {
+    font-size: 30px;
+}
+
 }
 
 </style>
