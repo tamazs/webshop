@@ -1,12 +1,9 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <div class="super_container">
       <Nav/>
       <router-view/>
+      <Footer/>
       <cursor-fx color="white" />
     </div>
   </div>
@@ -27,10 +24,12 @@ body {
 </style>
 
 <script>
+import Footer from './components/Footer.vue'
 import Nav from './components/Nav.vue'
 export default {
   components: {
-    Nav
+    Nav,
+    Footer
   }
 }
 </script>

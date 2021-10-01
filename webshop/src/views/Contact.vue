@@ -29,6 +29,7 @@
     width: 100vw;
     background-color: black;
     color: white;
+    overflow: hidden;
 }
 
 #container {
