@@ -4,7 +4,7 @@
       <Nav/>
       <router-view/>
       <Footer/>
-      <cursor-fx color="white" />
+      <cursor-fx color="white" id="cursor" />
     </div>
   </div>
 </template>
@@ -20,6 +20,10 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
+}
+
+#cursor {
+  z-index: 24;
 }
 </style>
 

@@ -1,6 +1,5 @@
 <template>
     <div class="inforowbody">
-        
             <div class="card-deck">
                 <div class="row">
                 <div class="card col-lg-4 col-sm-12">

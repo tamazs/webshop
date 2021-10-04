@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-black bg-black">
+    <nav class="navbar navbar-expand-lg navbar-black fixed-top bg-black">
   <div class="container-fluid">
     <router-link class="navbar-brand" id="logo" to="/">Streetverse</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,6 @@
           <router-link class="nav-link text-white" to="/contact">Contact</router-link>
         </li>
       </ul>
-      <p class="text-white">Welcome back</p>
       <router-link to="/login"><img :src="require('/src/assets/person.svg')" class="right" id="login"></router-link>
     </div>
   </div>
@@ -44,7 +43,9 @@ template{
     font-family: 'Raleway', sans-serif;
 }
 
-
+nav {
+  z-index: 4;
+}
 
 #logo{
     text-transform: uppercase;

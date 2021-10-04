@@ -98,7 +98,7 @@ h5 {
 }
 
 h5 {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 }
