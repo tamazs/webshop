@@ -1,62 +1,12 @@
 <template>
     <div id="shopwomanbody">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4" v-for="item in shoes" :key="item.name">
             <div class="col">
                 <div class="card">
-                <img :src="require('/src/assets/jordan1.jpeg')" class="card-img-top" alt="...">
+                <img :src="item.img" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">5200 DKK</p>
-                    <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
-                </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                <img :src="require('/src/assets/jordan6s.jpeg')" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">1499 DKK</p>
-                    <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
-                </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                <img :src="require('/src/assets/dunk.jpeg')" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">999 DKK</p>
-                    <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
-                </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                <img :src="require('/src/assets/court.jpeg')" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">3000 DKK</p>
-                    <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
-                </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                <img :src="require('/src/assets/jordan5.jpeg')" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">4300 DKK</p>
-                    <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
-                </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                <img :src="require('/src/assets/adidas.jpeg')" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">3100 DKK</p>
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.price }} DKK</p>
                     <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
                 </div>
                 </div>
@@ -67,7 +17,42 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            shoes: [
+                {
+                    img: require('../assets/jordan1.jpeg'),
+                    name: 'Air Jordan 1 TS',
+                    price: 5200
+                },
+                {
+                    img: require('../assets/jordan6s.jpeg'),
+                    name: 'Air Jordan 6 TS',
+                    price: 1499
+                },
+                {
+                    img: require('../assets/dunk.jpeg'),
+                    name: 'Dunk',
+                    price: 999
+                },
+                {
+                    img: require('../assets/court.jpeg'),
+                    name: 'Air Jordan 1 Court',
+                    price: 3000
+                },
+                {
+                    img: require('../assets/jordan5.jpeg'),
+                    name: 'Air Jordan 5 OW',
+                    price: 4300
+                },
+                {
+                    img: require('../assets/adidas.jpeg'),
+                    name: 'Adidas Superearth',
+                    price: 3100
+                },
+            ]
+        }
+    }
 }
 </script>
 
