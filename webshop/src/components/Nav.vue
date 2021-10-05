@@ -15,15 +15,16 @@
             Shop
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item text-white" href="#">Men</a></li>
+            <li><router-link class="dropdown-item text-white" to="/man">Man</router-link></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item text-white" href="#">Woman</a></li>
+            <li><router-link class="dropdown-item text-white" to="/woman">Woman</router-link></li>
           </ul>
         </li>
         <li class="nav-item">
           <router-link class="nav-link text-white" to="/contact">Contact</router-link>
         </li>
       </ul>
+      <router-link to="/cart"><img :src="require('/src/assets/cart.svg')" class="right" id="cart"></router-link>
       <router-link to="/login"><img :src="require('/src/assets/person.svg')" class="right" id="login"></router-link>
     </div>
   </div>
@@ -58,6 +59,12 @@ nav {
   height: 25px;
   width: auto;
   margin-right: 10px;
+}
+
+#cart {
+  height: 25px;
+  width: auto;
+  margin-right: 40px;
 }
 
 router-link{

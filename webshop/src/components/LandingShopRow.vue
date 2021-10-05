@@ -1,22 +1,26 @@
 <template>
     <div class="landingshopbody">
         <div class="row">
-            <div class="card bg-black text-black col-lg-4 offset-lg-1 col-sm-12">
-                <img :src="require('/src/assets/manlanding.jpeg')" class="card-img">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Man</h5>
-                    <p class="card-text">Shop our huge variety of man's sneakers.</p>
+            <router-link to="/man">
+                <div class="card bg-black text-black col-lg-4 offset-lg-1 col-sm-12">
+                    <img :src="require('/src/assets/manlanding.jpeg')" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Man</h5>
+                        <p class="card-text">Shop our huge variety of man's sneakers.</p>
+                    </div>
                 </div>
-            </div>
+            </router-link>
         </div>
         <div class="row">
-            <div class="card bg-black text-black col-lg-4 offset-lg-7 col-sm-12">
-                <img :src="require('/src/assets/womanlanding.jpeg')" class="card-img">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Woman</h5>
-                    <p class="card-text">Be trendy and up-to-date with our woman's section.</p>
+            <router-link to="/woman">
+                <div class="card bg-black text-black col-lg-4 offset-lg-7 col-sm-12">
+                    <img :src="require('/src/assets/womanlanding.jpeg')" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Woman</h5>
+                        <p class="card-text">Be trendy and up-to-date with our woman's section.</p>
+                    </div>
                 </div>
-            </div>
+            </router-link>
         </div>
     </div>
 </template>
