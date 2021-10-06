@@ -6,8 +6,7 @@ import Signup from '../views/Signup.vue'
 import Contact from '../views/Contact.vue'
 import Admin from '../views/Admin.vue'
 import Cart from '../views/Cart.vue'
-import Man from '../views/ShopMan.vue'
-import Woman from '../views/ShopWoman.vue'
+import Shop from '../views/Shop.vue'
 
 Vue.use(VueRouter)
 
@@ -43,14 +42,9 @@ const routes = [
     component: Admin
   },
   {
-    path: '/man',
-    name: 'Man',
-    component: Man
-  },
-  {
-    path: '/woman',
-    name: 'Woman',
-    component: Woman
+    path: '/shop',
+    name: 'Shop',
+    component: Shop
   },
 ]
 

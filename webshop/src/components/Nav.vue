@@ -10,15 +10,8 @@
         <li class="nav-item">
           <router-link class="nav-link text-white" aria-current="page" to="/">Home</router-link>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Shop
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><router-link class="dropdown-item text-white" to="/man">Man</router-link></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><router-link class="dropdown-item text-white" to="/woman">Woman</router-link></li>
-          </ul>
+        <li class="nav-item">
+          <router-link class="nav-link text-white" to="/shop">Shop</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link text-white" to="/contact">Contact</router-link>
