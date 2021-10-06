@@ -11,8 +11,7 @@
                 <h4 class="mt-lg-0 mt-sm-3">Links</h4>
                     <ul class="m-0 p-0">
                     <li><router-link class="text-white" aria-current="page" to="/">Home</router-link></li>
-                    <li><router-link class="text-white" aria-current="page" to="/man">Shop Man</router-link></li>
-                    <li><router-link class="text-white" aria-current="page" to="/woman">Shop Woman</router-link></li>
+                    <li><router-link class="text-white" aria-current="page" to="/shop">Shop</router-link></li>
                     <li><router-link class="text-white" aria-current="page" to="/contact">Contact</router-link></li>
                     </ul>
                 </div>

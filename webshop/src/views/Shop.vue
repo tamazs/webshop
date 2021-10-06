@@ -1,6 +1,7 @@
 <template>
     <div id="shopbody">
         <div class="container py-5">
+            <Filters/>
             <div class="row">
                 <ShopCard 
                 v-for="item in shoes" :key="item.id" :cardsSection="item"
@@ -11,11 +12,13 @@
 </template>
 
 <script>
+import Filters from '../components/Filters.vue'
 import ShopCard from '../components/ShopCard.vue'
 
 export default {
   components: { 
-      ShopCard
+      ShopCard,
+    Filters
       },
     data() {
         return {
@@ -24,38 +27,82 @@ export default {
                     id: 1,
                     img: require('../assets/jordan1.jpeg'),
                     name: 'Air Jordan 1 TS',
-                    price: 5200
+                    price: 5200,
+                    gender: 'Man',
+                    brand: 'Nike'
                 },
                 {
                     id: 2,
                     img: require('../assets/jordan6s.jpeg'),
                     name: 'Air Jordan 6 TS',
-                    price: 1499
+                    price: 1499,
+                    gender: 'Man',
+                    brand: 'Nike'
                 },
                 {
                     id: 3,
                     img: require('../assets/dunk.jpeg'),
                     name: 'Dunk',
-                    price: 999
+                    price: 999,
+                    gender: 'Woman',
+                    brand: 'Nike'
                 },
                 {
                     id: 4,
                     img: require('../assets/court.jpeg'),
                     name: 'Air Jordan 1 Court',
-                    price: 3000
+                    price: 3000,
+                    gender: 'Man',
+                    brand: 'Nike'
                 },
                 {
                     id: 5,
                     img: require('../assets/jordan5.jpeg'),
                     name: 'Air Jordan 5 OW',
-                    price: 4300
+                    price: 4300,
+                    gender: 'Man',
+                    brand: 'Off-White'
                 },
                 {
                     id: 6,
-                    img: require('../assets/adidas.jpeg'),
-                    name: 'Adidas Superearth',
-                    price: 3100
+                    img: require('../assets/offdunk.jpeg'),
+                    name: 'Dunk OW',
+                    price: 2600,
+                    gender: 'Woman',
+                    brand: 'Off-White'
                 },
+                {
+                    id: 7,
+                    img: require('../assets/yeezy.jpeg'),
+                    name: 'Yeezy 350',
+                    price: 4500,
+                    gender: 'Woman',
+                    brand: 'Adidas'
+                },
+                {
+                    id: 8,
+                    img: require('../assets/j1dye.jpeg'),
+                    name: 'Air Jordan 1 Tie Dye',
+                    price: 2399,
+                    gender: 'Woman',
+                    brand: 'Nike'
+                },
+                {
+                    id: 9,
+                    img: require('../assets/skeleton.jpeg'),
+                    name: 'Air Force 1 Skeleton',
+                    price: 2200,
+                    gender: 'Man',
+                    brand: 'Nike'
+                },
+                {
+                    id: 10,
+                    img: require('../assets/yeezy2.jpeg'),
+                    name: 'Yeezy 700',
+                    price: 3200,
+                    gender: 'Woman',
+                    brand: 'Adidas'
+                }
             ]
         }
     }

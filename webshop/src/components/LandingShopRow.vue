@@ -1,7 +1,7 @@
 <template>
     <div class="landingshopbody">
         <div class="row">
-            <router-link to="/man">
+            <router-link to="/shop">
                 <div class="card bg-black text-black col-lg-4 offset-lg-1 col-sm-12">
                     <img :src="require('/src/assets/manlanding.jpeg')" class="card-img">
                     <div class="card-img-overlay">
@@ -12,7 +12,7 @@
             </router-link>
         </div>
         <div class="row">
-            <router-link to="/woman">
+            <router-link to="/shop">
                 <div class="card bg-black text-black col-lg-4 offset-lg-7 col-sm-12">
                     <img :src="require('/src/assets/womanlanding.jpeg')" class="card-img">
                     <div class="card-img-overlay">

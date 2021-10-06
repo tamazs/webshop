@@ -1,6 +1,6 @@
 <template>
     <div class="col">
-        <div class="card" style="width: 14rem;">
+        <div class="card mb-5" style="width: 14rem;">
             <img :src="cardsSection.img" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{ cardsSection.name }}</h5>
