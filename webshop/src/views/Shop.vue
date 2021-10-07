@@ -17,7 +17,7 @@ import ShopCard from '../components/ShopCard.vue'
 
 export default {
   components: { 
-      ShopCard,
+    ShopCard,
     Filters
       },
     data() {
@@ -114,6 +114,4 @@ export default {
     background-color: black;
     padding: 20px;
 }
-
-
 </style>
