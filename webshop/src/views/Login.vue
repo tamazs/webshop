@@ -82,11 +82,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 #loginbody {
     height: 100vh;
     width: 100vw;
     background-color: black;
     overflow: hidden;
+    font-family: 'Raleway', sans-serif;
 }
 
 form {

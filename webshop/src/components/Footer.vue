@@ -38,10 +38,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 .footer{
   background: black;
   color:white;
   border-top: white 2px solid;
+  font-family: 'Raleway', sans-serif;
   
   .links{
     ul {list-style-type: none;}

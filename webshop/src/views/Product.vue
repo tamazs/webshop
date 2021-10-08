@@ -22,10 +22,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 .card {
     background-color: black;
     color: white;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 #productimg {

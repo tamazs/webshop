@@ -51,9 +51,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 #filters {
     background-color: black;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .container{

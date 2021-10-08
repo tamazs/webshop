@@ -21,10 +21,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 .card {
     color: white;
     background-color: black;
     text-decoration: none;
+}
+
+.col {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
 }
 
 router-link{

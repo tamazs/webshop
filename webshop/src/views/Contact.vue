@@ -24,12 +24,15 @@
 </template>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 #contactbody {
     height: 100vh;
     width: 100vw;
     background-color: black;
     color: white;
     overflow: hidden;
+    font-family: 'Raleway', sans-serif;
 }
 
 #container {

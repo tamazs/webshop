@@ -47,10 +47,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 #cartbody {
     color: white;
     overflow-x: hidden;
     background-color: black;
+    font-family: 'Raleway', sans-serif;
 }
 
 #checkout {
