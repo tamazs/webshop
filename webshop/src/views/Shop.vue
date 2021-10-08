@@ -29,7 +29,8 @@ export default {
                     name: 'Air Jordan 1 TS',
                     price: 5200,
                     gender: 'Man',
-                    brand: 'Nike'
+                    brand: 'Nike',
+                    size: [40,42,44]
                 },
                 {
                     id: 2,
@@ -37,7 +38,8 @@ export default {
                     name: 'Air Jordan 6 TS',
                     price: 1499,
                     gender: 'Man',
-                    brand: 'Nike'
+                    brand: 'Nike',
+                    size: [42,44]
                 },
                 {
                     id: 3,
@@ -45,7 +47,8 @@ export default {
                     name: 'Dunk',
                     price: 999,
                     gender: 'Woman',
-                    brand: 'Nike'
+                    brand: 'Nike',
+                    size: [36,38,40]
                 },
                 {
                     id: 4,
@@ -53,7 +56,8 @@ export default {
                     name: 'Air Jordan 1 Court',
                     price: 3000,
                     gender: 'Man',
-                    brand: 'Nike'
+                    brand: 'Nike',
+                    size: [42]
                 },
                 {
                     id: 5,
@@ -61,7 +65,8 @@ export default {
                     name: 'Air Jordan 5 OW',
                     price: 4300,
                     gender: 'Man',
-                    brand: 'Off-White'
+                    brand: 'Off-White',
+                    size: [44]
                 },
                 {
                     id: 6,
@@ -69,7 +74,8 @@ export default {
                     name: 'Dunk OW',
                     price: 2600,
                     gender: 'Woman',
-                    brand: 'Off-White'
+                    brand: 'Off-White',
+                    size: [38]
                 },
                 {
                     id: 7,
@@ -77,7 +83,8 @@ export default {
                     name: 'Yeezy 350',
                     price: 4500,
                     gender: 'Woman',
-                    brand: 'Adidas'
+                    brand: 'Adidas',
+                    size: [36,40]
                 },
                 {
                     id: 8,
@@ -85,7 +92,8 @@ export default {
                     name: 'Air Jordan 1 Tie Dye',
                     price: 2399,
                     gender: 'Woman',
-                    brand: 'Nike'
+                    brand: 'Nike',
+                    size: [40]
                 },
                 {
                     id: 9,
@@ -93,7 +101,8 @@ export default {
                     name: 'Air Force 1 Skeleton',
                     price: 2200,
                     gender: 'Man',
-                    brand: 'Nike'
+                    brand: 'Nike',
+                    size: [40,42]
                 },
                 {
                     id: 10,
@@ -101,7 +110,8 @@ export default {
                     name: 'Yeezy 700',
                     price: 3200,
                     gender: 'Woman',
-                    brand: 'Adidas'
+                    brand: 'Adidas',
+                    size: [36,38]
                 }
             ]
         }
