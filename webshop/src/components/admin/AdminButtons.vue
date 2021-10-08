@@ -2,20 +2,24 @@
     <div class="adminbuttons">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-                <div class="card">
-                <img class="card-img-top" :src="require('/src/assets/file.svg')" id="file" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Orders</h5>
-                </div>
-                </div>
+                <router-link to="/orders">
+                    <div class="card">
+                    <img class="card-img-top" :src="require('/src/assets/file.svg')" id="file" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Orders</h5>
+                    </div>
+                    </div>
+                </router-link>
             </div>
             <div class="col">
-                <div class="card">
-                <img class="card-img-top" :src="require('/src/assets/plus.svg')" id="plus" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Add new item</h5>
-                </div>
-                </div>
+                <router-link to="/newitems">
+                    <div class="card">
+                    <img class="card-img-top" :src="require('/src/assets/plus.svg')" id="plus" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Add new item</h5>
+                    </div>
+                    </div>
+                </router-link>
             </div>
         </div>
     </div>

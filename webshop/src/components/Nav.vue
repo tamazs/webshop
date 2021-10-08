@@ -18,6 +18,9 @@
         </li>
       </ul>
       <router-link to="/cart"><img :src="require('/src/assets/cart.svg')" class="right" id="cart"></router-link>
+      <li class="nav-item">
+          <p class="text-white" id="cartcount">0</p>
+        </li>
       <router-link to="/login"><img :src="require('/src/assets/person.svg')" class="right" id="login"></router-link>
     </div>
   </div>
@@ -57,14 +60,17 @@ nav {
 #cart {
   height: 25px;
   width: auto;
-  margin-right: 40px;
+  margin-right: 5px;
 }
 
 router-link{
     color: white;
 }
 
-
+#cartcount {
+  margin-right: 40px;
+  font-size: 25px;
+}
 
 ul{
     background-color: black;

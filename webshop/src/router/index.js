@@ -8,6 +8,8 @@ import Admin from '../views/Admin.vue'
 import Cart from '../views/Cart.vue'
 import Shop from '../views/Shop.vue'
 import Product from '../views/Product.vue'
+import NewItems from '../views/NewItems.vue'
+import Orders from '../views/Orders.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +53,16 @@ const routes = [
     path: '/product',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/newitems',
+    name: 'NewItems',
+    component: NewItems
+  },
+  {
+    path: '/orders',
+    name: 'Orders',
+    component: Orders
   },
 ]
 

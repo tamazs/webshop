@@ -6,7 +6,6 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ cardsSection.name }}</h5>
                     <p class="card-text">{{ cardsSection.price }} DKK</p>
-                <button class="btn btn-outline-light p-2" type="submit">Add to cart</button>
             </div>
             </div>
         </router-link>
