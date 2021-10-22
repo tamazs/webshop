@@ -14,7 +14,6 @@
 <script>
 import Filters from '../components/Filters.vue'
 import ShopCard from '../components/ShopCard.vue'
-import { dbShoes, fb } from '../firebase'
 
 export default {
   components: { 
@@ -118,12 +117,8 @@ export default {
         }
     },
     methods: {
-        getDb(){
-            console.log(dbShoes)
-        }
     },
     beforeMount(){
-        this.getDb()
     }
 }
 </script>
