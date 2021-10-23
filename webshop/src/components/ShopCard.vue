@@ -1,22 +1,25 @@
 <template>
     <div class="col">
-        <router-link to="/product">
+        <div @click="redirectToProductPage">
             <div class="card mb-5" style="width: 14rem;">
-                <img :src="cardsSection.img" class="card-img-top">
+                <img :src="cardsSection.url" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">{{ cardsSection.name }}</h5>
                     <p class="card-text">{{ cardsSection.price }} DKK</p>
             </div>
             </div>
-        </router-link>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     props: ["cardsSection"],
-
-    
+    methods: {
+        redirectToProductPage(){
+        this.$router.push({name:'Product', params: {id: this.cardsSection.id}})
+        }
+    }
 }
 </script>
 

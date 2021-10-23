@@ -50,7 +50,7 @@ const routes = [
     component: Shop
   },
   {
-    path: '/product',
+    path: '/product/:id',
     name: 'Product',
     component: Product
   },
