@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="adminmainbody">
         <AdminInfoRow/>
         <AdminButtons/>
     </div>
@@ -20,5 +20,9 @@ export default {
 template {
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
+}
+
+#adminmainbody {
+  min-height: 100vh;
 }
 </style>

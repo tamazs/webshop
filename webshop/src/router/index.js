@@ -11,6 +11,9 @@ import Product from '../views/Product.vue'
 import NewItems from '../views/NewItems.vue'
 import Orders from '../views/Orders.vue'
 
+
+import AdminGuard from '../shared/guards/AdminGuard'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -40,14 +43,16 @@ const routes = [
     component: Cart
   },
   {
-    path: '/admin',
-    name: 'Admin',
-    component: Admin
-  },
-  {
     path: '/shop',
     name: 'Shop',
     component: Shop
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    meta: { adminOnly: true },
+    beforeEnter: AdminGuard,
+    component: Admin
   },
   {
     path: '/product/:id',
@@ -57,12 +62,17 @@ const routes = [
   {
     path: '/newitems',
     name: 'NewItems',
-    component: NewItems
+    meta: { adminOnly: true },
+    component: NewItems,
+    beforeEnter: AdminGuard
   },
   {
     path: '/orders',
     name: 'Orders',
-    component: Orders
+    meta: { adminOnly: true },
+    component: Orders,
+    beforeEnter: AdminGuard
+
   },
 ]
 

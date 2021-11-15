@@ -12,10 +12,6 @@ export function logout() {
     return auth.signOut()
 }
 
-export function getCurrentUser() {
-    return auth.currentUser
-}
-
 export function updateUser(data) {
     return auth.updateCurrentUser(data)
 }
