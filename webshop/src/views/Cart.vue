@@ -23,7 +23,7 @@
             <div class="card text-center" id="checkout">
               <div class="card-body">
                 <p class="card-text text-white">Delivery: Free</p>
-                <p class="card-text text-white">Subtotal: {{ subtotal }} DKK</p>
+                <p class="card-text text-white">Subtotal: {{ $store.getters["cart/totalPrice"] }} DKK</p>
                 <button class="btn btn-outline-light p-2 mt-5" @click="saveOrder()">Checkout</button>
               </div>
             </div>
@@ -66,26 +66,20 @@ export default {
   data: () => ({
     currentCart: {},
     currentCartItems: [],
-    subtotal: 0,
     currentCartId: null
   }),
   methods: {
-    calculateTotal() {
-      this.currentCart.shoesList.forEach(x => this.subtotal += x.price)
-    },
     getCurrentCart() {
       this.currentCart = this.$store.getters["cart/currentCart"]
       this.currentCartId = this.currentCart.id
-      console.log("currentCartId", this.currentCartId)
     },
     saveOrder() {
       let order = {}
       order = this.currentCart
-      order.total = this.subtotal
+      order.total = this.$store.getters["cart/totalPrice"]
       order.id = null
       order.status = "Pending"
       orderService.saveOrder(order).then(() => {
-        console.log("idgec", this.currentCartId)
         this.$store.dispatch("cart/deleteCurrentCartFromDb", this.currentCartId)
         this.$modal.show("successModal")
       }).catch(() => {
@@ -98,9 +92,8 @@ export default {
       this.$router.push({name: "Shop"})
     }
   },
-  created() {
+  beforeMount() {
     this.getCurrentCart()
-    this.calculateTotal()
   }
 }
 </script>

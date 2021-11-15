@@ -9,8 +9,13 @@ export const cart = {
     },
     getters: {
         currentCart: state => state.currentCart,
-        currentCartSize: state => state.currentCartSize
-    },
+        currentCartSize: state => state.currentCartSize,
+        totalPrice: state => {
+            let total = 0
+            state.currentCart.shoesList.forEach(x => total += x.price)
+            return total
+            }
+        },
     actions: {
         getCartByUserId({commit}, userId) {
             let result = {}
@@ -51,6 +56,22 @@ export const cart = {
                         reject(error)
                     })
                 })
+        },
+        deleteShoesFromCart({commit}, removeObject){
+            const indexOfShoes = removeObject.currentCart.shoesList.findIndex(item => item.selectedSize === removeObject.productSize && item.productId === removeObject.productId);
+            if (indexOfShoes > -1) {
+            removeObject.currentCart.shoesList.splice(indexOfShoes, 1)
+            }
+             let result = {}
+            return new Promise((resolve, reject) => {
+                cartService.saveCart(removeObject.currentCart).then(res => {
+                    commit("setCurrentCart", removeObject.currentCart)
+                    result = res;
+                    resolve(result)
+                }).catch((error) => {
+                    reject(error)
+                })
+            })
         }
     },
     mutations: {

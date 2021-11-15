@@ -11,13 +11,19 @@
         </div>
         <div class="my-auto col-7">
             <div class="row text-right">
-                <div class="col-6">
+                <div class="col-3">
                     <div class="row d-flex justify-content-end px-3">
                         <p class="mb-0" id="cnt1">{{cartSection.quantity}}</p>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-3">
                     <h6 class="mob-text">{{ cartSection.price }} DKK</h6>
+                </div>
+              <div class="col-3">
+                    <h6 class="mob-text">{{ cartSection.selectedSize }}</h6>
+                </div>
+              <div class="col-3">
+                    <button @click="removeShoesFromCart"> X</button>
                 </div>
             </div>
         </div>
@@ -55,6 +61,14 @@ export default {
     changeStatus(){
       this.cartSection.status = "Shipping"
       this.$store.dispatch("order/changeOrderStatus", this.cartSection)
+    },
+    removeShoesFromCart(){
+      let removeObject = {}
+      removeObject.productId = this.cartSection.productId
+      removeObject.productSize = this.cartSection.selectedSize
+      removeObject.currentCart = this.$store.getters["cart/currentCart"]
+
+      this.$store.dispatch("cart/deleteShoesFromCart", removeObject)
     }
   },
   beforeMount() {
@@ -70,10 +84,6 @@ export default {
     width: 180px;
     height: 180px;
     border-radius: 5px
-}
-
-.book {
-    margin: 20px 15px 5px 15px
 }
 
 .border-top {
