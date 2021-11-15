@@ -4,20 +4,20 @@
                 <div class="row">
                 <div class="card col-lg-4 col-sm-12 text-center">
                     <div class="card-body">
-                    <h5 class="card-title">15</h5>
-                    <p class="card-text">Users</p>
+                    <h5 class="card-title">{{$store.getters["order/orderCount"]}}</h5>
+                    <p class="card-text">Number of orders</p>
                     </div>
                 </div>
                 <div class="card col-lg-4 col-sm-12 text-center">
                     <div class="card-body">
-                    <h5 class="card-title">6000 DKK</h5>
-                    <p class="card-text">Income</p>
+                    <h5 class="card-title">{{ $store.getters["order/totalIncome"] }} DKK</h5>
+                    <p class="card-text">Total Income</p>
                     </div>
                 </div>
                 <div class="card col-lg-4 col-sm-12">
                     <div class="card-body">
-                    <h5 class="card-title">12</h5>
-                    <p class="card-text">Items</p>
+                    <h5 class="card-title">{{$store.getters["order/totalNumberOfItems"]}}</h5>
+                    <p class="card-text">Number of ordered items</p>
                     </div>
                 </div>
             </div>
@@ -65,6 +65,6 @@ template{
 
 <script>
 export default {
-    
+
 }
 </script>
