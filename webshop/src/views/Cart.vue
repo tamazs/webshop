@@ -84,6 +84,7 @@ export default {
       order.status = "Pending"
       orderService.saveOrder(order).then(() => {
         this.$store.dispatch("cart/deleteCurrentCartFromDb", this.currentCartId)
+        this.$store.commit("cart/resetCurrentCart")
         this.$modal.show("successModal")
       }).catch(() => {
         this.$store.commit("cart/resetCurrentCart")
@@ -93,6 +94,11 @@ export default {
     closeModal() {
       this.$modal.hide('successModal')
       this.$router.push({name: "Shop"})
+    }
+  },
+  computed: {
+    total: function () {
+      return this.$store.getters["cart/totalPrice"]
     }
   },
   beforeMount() {

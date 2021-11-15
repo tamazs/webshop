@@ -53,7 +53,7 @@
     </p>
     <div>
       <modal name="failureModal">
-          <div id="checkoutmodal" class="bg-dark"><p>Oops! Something went wrong, please try again later!</p>
+          <div id="checkoutmodal" class="bg-dark"><p>Oops! The e-mail or password is wrong.</p>
             <div slot="top-right">
               <button @click="$modal.hide('failureModal')" class="btn btn-outline-light p-2 mt-5">
                 X Close

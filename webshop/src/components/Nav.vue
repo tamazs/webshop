@@ -21,7 +21,7 @@
             <router-link class="nav-link text-white" to="/admin">Admin</router-link>
           </li>
         </ul>
-        <router-link to="/cart" class="nav-item" id="cartlink">
+        <router-link to="/cart" class="nav-item" id="cartlink" v-if="$store.getters['authentication/token']">
           <img :src="require('/src/assets/cart.svg')" id="cart">
           <p  class="text-white" id="cartcount">{{$store.getters["cart/currentCartSize"]}}</p>
         </router-link>

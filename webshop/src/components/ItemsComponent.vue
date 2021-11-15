@@ -27,7 +27,7 @@
     <div v-if="place === 'orders'" class="row d-flex justify-content-center border-top">
       <div class="col-5">
         <div class="row d-flex">
-          <div class="item"> <img :src="cartSection.url" class="item-img"> </div>
+          <div class="my-auto flex-column d-flex pad-left"><p class="mb-0 text-uppercase" id="cnt1">{{cartSection.id}}</p></div>
           <div class="my-auto flex-column d-flex pad-left">
             <h6 class="mob-text">{{ cartSection.name }}</h6>
           </div>

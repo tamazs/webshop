@@ -50,7 +50,6 @@ export const cart = {
                 return new Promise((resolve, reject) => {
                     cartService.removeCart(cartId).then(() => {
                         commit("resetCurrentCart")
-
                         resolve(result)
                     }).catch((error) => {
                         reject(error)

@@ -16,7 +16,6 @@ export const authentication = {
     actions: {
         login({commit}, credentials) {
             let result = {}
-            console.log(credentials)
             return new Promise((resolve, reject) => {
                 authService.login(credentials.email, credentials.password).then(
                     (userCredential) => {
