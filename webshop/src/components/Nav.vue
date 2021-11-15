@@ -21,12 +21,10 @@
             <router-link class="nav-link text-white" to="/admin">Admin</router-link>
           </li>
         </ul>
-        <router-link to="/cart"><img :src="require('/src/assets/cart.svg')" class="right" id="cart"></router-link>
-        <li class="nav-item">
-          <div v-if="$store.getters['cart/currentCart'].shoesList != null || $store.getters['cart/currentCart'].shoesList !== undefined">
-          <p v-if="$store.getters['cart/currentCart'].shoesList.length > 0" class="text-white" id="cartcount">{{$store.getters['cart/currentCart'].shoesList.length}}</p>
-          </div>
-        </li>
+        <router-link to="/cart" class="nav-item" id="cartlink">
+          <img :src="require('/src/assets/cart.svg')" id="cart">
+          <p  class="text-white" id="cartcount">{{$store.getters["cart/currentCartSize"]}}</p>
+        </router-link>
         <div class="form-group text-right mb-0">
           <button
               v-if="!$store.getters['authentication/token']"
@@ -52,7 +50,6 @@ export default {
   data: () =>({
   }),
   beforeMount() {
-    //this.currentCart = this.$store.getters["cart/currentCart"].shoesList.length
   },
 };
 </script>
@@ -94,6 +91,7 @@ router-link {
 #cartcount {
   margin-right: 40px;
   font-size: 25px;
+  margin-bottom: 0;
 }
 
 ul {
@@ -102,6 +100,11 @@ ul {
 
 #search {
   background-color: black;
+}
+
+#cartlink {
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (min-width: 890px) {

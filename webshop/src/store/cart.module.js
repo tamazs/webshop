@@ -5,12 +5,11 @@ export const cart = {
     namespaced: true,
     state: {
         currentCart: {},
+        currentCartSize: 0
     },
     getters: {
         currentCart: state => state.currentCart,
-        currentCartSize: (state, getters) => {
-            return getters?.currentCart?.shoesList.length || 0
-        }
+        currentCartSize: state => state.currentCartSize
     },
     actions: {
         getCartByUserId({commit}, userId) {
@@ -57,9 +56,12 @@ export const cart = {
     mutations: {
         setCurrentCart(state, cartItem) {
             state.currentCart = cartItem
+            state.currentCartSize = cartItem.shoesList.length
         },
         resetCurrentCart(state){
             state.currentCart = {}
+            state.currentCart.shoesList = []
+            state.currentCartSize = 0
         }
     }
 }
