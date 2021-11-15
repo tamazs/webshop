@@ -94,8 +94,6 @@
 
 <script>
 
-const authService = require("@/shared/services/auth.service");
-
 export default {
   data: () => ({
     password: null,
@@ -121,8 +119,12 @@ export default {
       }
 
       if (!this.errors.length) {
-        authService.signUp(this.email, this.password).then(() => {
-          this.$router.push({name:"Shop"})
+        const credentials = {}
+        credentials.email = this.email
+        credentials.password = this.password
+        this.$store
+            .dispatch("authentication/signUp", credentials).then(() => {
+          this.$router.push({name: "Shop"})
         })
       }
 
