@@ -51,6 +51,17 @@
       or
       <router-link to="/signup" class="text-white text-uppercase">Sign Up</router-link>
     </p>
+    <div>
+      <modal name="failureModal">
+          <div id="checkoutmodal" class="bg-dark"><p>Oops! Something went wrong, please try again later!</p>
+            <div slot="top-right">
+              <button @click="$modal.hide('failureModal')" class="btn btn-outline-light p-2 mt-5">
+                X Close
+              </button>
+            </div>
+          </div>
+        </modal>
+    </div>
   </div>
 </template>
 
@@ -84,7 +95,7 @@ export default {
 
       this.$store.dispatch("authentication/login", credentials).then(() => {
         this.$router.push({name: "Shop"})
-      })
+      }).catch(()=>this.$modal.show("failureModal"))
     },
     validEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -111,5 +122,13 @@ form {
 
 #card {
   padding: 60px;
+}
+
+#checkoutmodal {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
 }
 </style>

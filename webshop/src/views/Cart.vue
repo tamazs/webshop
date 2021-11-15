@@ -7,11 +7,14 @@
         </div>
         <div class="col-7">
           <div class="row text-right">
-            <div class="col-6">
-              <h6 class="mt-2">Quantity</h6>
-            </div>
-            <div class="col-6">
+            <div class="col-4">
               <h6 class="mt-2">Price</h6>
+            </div>
+            <div class="col-4">
+              <h6 class="mt-2">Size</h6>
+            </div>
+            <div class="col-4">
+              <h6 class="mt-2">Delete</h6>
             </div>
           </div>
         </div>

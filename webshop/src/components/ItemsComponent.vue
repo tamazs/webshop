@@ -11,19 +11,14 @@
         </div>
         <div class="my-auto col-7">
             <div class="row text-right">
-                <div class="col-3">
-                    <div class="row d-flex justify-content-end px-3">
-                        <p class="mb-0" id="cnt1">{{cartSection.quantity}}</p>
-                    </div>
-                </div>
-                <div class="col-3">
+                <div class="col-4">
                     <h6 class="mob-text">{{ cartSection.price }} DKK</h6>
                 </div>
-              <div class="col-3">
+              <div class="col-4">
                     <h6 class="mob-text">{{ cartSection.selectedSize }}</h6>
                 </div>
-              <div class="col-3">
-                    <button @click="removeShoesFromCart"> X</button>
+              <div class="col-4">
+                    <button @click="removeShoesFromCart" class="btn text-light">X</button>
                 </div>
             </div>
         </div>
