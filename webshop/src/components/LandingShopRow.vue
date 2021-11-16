@@ -65,6 +65,10 @@ export default {
         padding-left: 0;
     }
 
+    .card {
+        margin-bottom: 200px;
+    }
+
 @media only screen and (min-width: 890px) {
 
     .card-title {

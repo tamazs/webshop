@@ -56,41 +56,6 @@ export default {
   border: 3px solid white;
 }
 
-.plus-minus {
-  position: relative
-}
-
-.plus {
-  position: absolute;
-  top: -4px;
-  left: 12px;
-  cursor: pointer
-}
-
-.minus {
-  position: absolute;
-  top: 8px;
-  left: 14px;
-  cursor: pointer
-}
-
-.book,
-.book-img {
-  width: 120px;
-  height: 180px;
-  border-radius: 5px
-}
-
-.book {
-  margin: 20px 15px 5px 15px
-}
-
-.border-top {
-  border-top: 1px solid #EEEEEE !important;
-  margin-top: 20px;
-  padding-top: 15px
-}
-
 .card {
   margin: 40px 0px;
   padding: 40px 50px;
@@ -106,12 +71,6 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-
-  .book,
-  .book-img {
-    width: 100px;
-    height: 150px
-  }
 
   .card {
     padding-left: 15px;

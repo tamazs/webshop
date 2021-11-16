@@ -44,7 +44,7 @@ template{
 }
 
 .col {
-    padding: 150px;
+    padding: 80px;
 }
 
 .card {
@@ -54,7 +54,7 @@ template{
     font-weight: 100;
     font-size: 16px;
     margin-top: 100px;
-    padding: 60px;
+    padding: 20px;
     border: 1px white solid;
 }
 
@@ -67,6 +67,11 @@ template{
 @media only screen and (min-width: 992px) {
     .card {
     margin-top: 0;
+    padding: 60px;
     }
+
+    .col {
+    padding: 150px;
+}
 }
 </style>

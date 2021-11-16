@@ -33,6 +33,7 @@
     color: white;
     overflow: hidden;
     font-family: 'Raleway', sans-serif;
+    margin-top: 50px;
 }
 
 #container {
@@ -80,6 +81,10 @@ h5 {
 }
 
 @media only screen and (min-width: 890px) {
+    #contactbody {
+        margin-top: 0;
+    }
+
     #container {
     display: flex;
     align-items: center;

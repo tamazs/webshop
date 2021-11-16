@@ -5,7 +5,7 @@
         <div class="col-md-6">
           <img :src="currentShoes.url" id="productimg">
         </div>
-        <div class="col-md-6 pt-5">
+        <div class="col-md-6 pt-5" id="productinfo">
           <h1 id="producttitle">{{ currentShoes.name }}</h1>
           <p id="productprice">{{ currentShoes.price }} DKK</p>
           <div class="form-group mb-3">
@@ -107,5 +107,17 @@ export default {
 
 #pref-perpage {
   width: 20vw;
+}
+
+@media screen and (max-width: 768px) {
+ #productimg {
+  height: auto;
+  width: 100vw;
+  }
+
+  #productinfo {
+    padding: 50px;
+  }
+
 }
 </style>

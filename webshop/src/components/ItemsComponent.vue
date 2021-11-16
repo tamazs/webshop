@@ -27,7 +27,7 @@
     <div v-if="place === 'orders'" class="row d-flex justify-content-center border-top">
       <div class="col-5">
         <div class="row d-flex">
-          <div class="my-auto flex-column d-flex pad-left"><p class="mb-0 text-uppercase" id="cnt1">{{cartSection.id}}</p></div>
+          <div class="my-auto flex-column d-flex pad-left"><p class="mb-0 text-uppercase" id="orderid">{{cartSection.id}}</p></div>
           <div class="my-auto flex-column d-flex pad-left">
             <h6 class="mob-text">{{ cartSection.name }}</h6>
           </div>
@@ -81,12 +81,6 @@ export default {
     border-radius: 5px
 }
 
-.border-top {
-    border-top: 1px solid #EEEEEE !important;
-    margin-top: 20px;
-    padding-top: 15px
-}
-
 .card {
     margin: 40px 0px;
     padding: 40px 50px;
@@ -106,7 +100,7 @@ export default {
     .item,
     .item-img {
         width: 100px;
-        height: 150px
+        height: 100px
     }
 
     .card {
@@ -120,6 +114,10 @@ export default {
 
     .pad-left {
         padding-left: 20px
+    }
+
+    #orderid {
+      word-wrap: break-word;
     }
 }
 </style>
