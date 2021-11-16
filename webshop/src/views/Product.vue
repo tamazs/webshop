@@ -15,7 +15,7 @@
               </option>
             </select>
           </div> <!-- form group [rows] -->
-          <button class="btn btn-outline-light p-2 mt-5" type="submit" id="cartbtn" @click="addShoesItemToCart">Add to
+          <button class="btn btn-outline-light p-2 mt-5" type="submit" id="cartbtn" :disabled="!$store.getters['authentication/token']" @click="addShoesItemToCart">Add to
             cart
           </button>
         </div>
